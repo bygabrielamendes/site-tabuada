@@ -1,0 +1,83 @@
+/* Remove as margens padrões do navegador */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* O Container Principal - Centraliza tudo e cria o fundo */
+.container-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  
+  /* PAPEL QUADRICULADO (Matemática) */
+  background-color: #1a1a1a;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px; /* Tamanho dos quadradinhos */
+  color: white;
+}
+
+/* Estilo do Input */
+.input-numero {
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #646cff;
+  background-color: #242424;
+  color: white;
+  text-align: center;
+  outline: none;
+  width: 150px;
+  transition: border-color 0.3s;
+}
+
+.input-numero:focus {
+  border-color: #00d1ff; /* Muda de cor quando clica */
+}
+
+/* TIRA AS SETINHAS DO INPUT (Sua pergunta 3) */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+.card-tabuada {
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  min-width: 300px;
+  border: 1px solid #646cff;
+  animation: subirSuave 0.5s ease-out; /* Animação ao aparecer */
+}
+.card-tabuada h2 {
+  font-size: 1.3rem; 
+  margin-bottom: 15px !important; 
+  margin-top: 0; 
+  padding-top: 0;
+}
+
+.item-tabuada {
+  font-size: 1.2rem;
+  margin: 4px 0;
+  border-bottom: 1px solid #333;
+  padding-bottom: 2px;
+  display: flex;
+  justify-content: center; 
+  gap: 8px;
+}
+
+@keyframes subirSuave {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
