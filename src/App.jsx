@@ -21,7 +21,6 @@ function App() {
         <input 
           type="number" 
           className="input-numero"
-          value={numero} 
           onChange={lidarComMudanca} 
           placeholder="Ex: 7"
         />
