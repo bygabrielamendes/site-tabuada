@@ -3,7 +3,7 @@ import './App.css'
 import { Tabuada } from './components/Tabuada' 
 
 function App() {
-  const [numero, setNumero] = useState('')
+  const [numero, setNumero] = useState(0)
 
   const lidarComMudanca = (e) => {
     const valorDigitado = e.target.value;
