@@ -21,14 +21,13 @@ function App() {
         <input 
           type="number" 
           className="input-numero"
-          value={numero} 
+         value={numero} 
           onChange={lidarComMudanca} 
           placeholder="Ex: 7"
         />
       </div>
 
-      {/*Chamamos o componente e passamos o numero pra ele */}
-      <Tabuada numero={numero} />
+      <Tabuada numero={numero}/>
 
     </div>
   )
