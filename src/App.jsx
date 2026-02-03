@@ -7,7 +7,7 @@ function App() {
 
   const lidarComMudanca = (e) => {
     const valorDigitado = e.target.value;
-    if (valorDigitado.length > 10) return;
+    //if (valorDigitado.length > 10) return;
     setNumero(valorDigitado);
   }
 

@@ -4,7 +4,7 @@ import React from 'react';
 export function Tabuada({numero}) {
   
   // Se não tiver número, mostra a mensagem de aguardando
-  if (numero === '') {
+  if (numero === '' || numero === 0) {
     return <p style={{ color: '#555' }}>Aguardando...</p>;
   }
 
