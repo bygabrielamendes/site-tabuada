@@ -22,7 +22,6 @@ body, html {
   color: white;
 }
 
-/* Títulos e Textos */
 .titulo-principal {
   font-size: 2.5rem;
   margin-bottom: 10px;
@@ -46,7 +45,7 @@ body, html {
   color: white;
   text-align: center;
   outline: none;
-  width: 200px; /* Aumentei um pouco para caber os 10 dígitos */
+  width: 200px; 
   transition: border-color 0.3s;
   margin-top: 15px;
 }

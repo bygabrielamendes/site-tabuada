@@ -11,10 +11,7 @@ function App() {
       setNumero('');
       return;
     }
-    
-    if (/^\d*$/.test(valorDigitado)) {
-      setNumero(valorDigitado.slice(0, 10));
-    }
+     setNumero(valorDigitado);
   };
 
   return (
@@ -27,7 +24,7 @@ function App() {
           type="text" 
           inputMode="numeric"
           className="input-numero"
-          value={numero}
+          maxLength={10}
           onChange={lidarComMudanca} 
           placeholder="Ex: 7"
         />
