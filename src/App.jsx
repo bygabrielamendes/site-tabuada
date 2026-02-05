@@ -21,7 +21,7 @@ function App() {
         <p className="texto-instrucao">Digite um número para calcular:</p>
         
         <input 
-          type="number" 
+          type="text" 
           inputMode="numeric"
           className="input-numero"
           maxLength={10}
