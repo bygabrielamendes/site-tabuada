@@ -1,13 +1,13 @@
-/* Remove as margens padrões do navegador */
+/* Configurações Gerais */
 body, html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a1a;
 }
 
-/* O Container Principal - Centraliza tudo e cria o fundo */
 .container-principal {
   display: flex;
   flex-direction: column;
@@ -15,17 +15,28 @@ body, html {
   align-items: center;
   min-height: 100vh;
   width: 100vw;
-  
-  /* PAPEL QUADRICULADO (Matemática) */
-  background-color: #1a1a1a;
   background-image: 
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px; /* Tamanho dos quadradinhos */
+  background-size: 20px 20px;
   color: white;
 }
 
-/* Estilo do Input */
+/* Títulos e Textos */
+.titulo-principal {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.texto-instrucao {
+  color: #ccc;
+}
+
+.texto-aguardando {
+  color: #555;
+}
+
+
 .input-numero {
   padding: 8px 12px;
   font-size: 1.2rem;
@@ -35,21 +46,14 @@ body, html {
   color: white;
   text-align: center;
   outline: none;
-  width: 150px;
+  width: 200px; /* Aumentei um pouco para caber os 10 dígitos */
   transition: border-color 0.3s;
+  margin-top: 15px;
 }
 
 .input-numero:focus {
-  border-color: #00d1ff; /* Muda de cor quando clica */
+  border-color: #00d1ff;
 }
-
-/* TIRA AS SETINHAS DO INPUT (Sua pergunta 3) */
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
-
 
 .card-tabuada {
   background-color: #242424;
@@ -58,13 +62,15 @@ input[type=number]::-webkit-outer-spin-button {
   box-shadow: 0 10px 40px rgba(0,0,0,0.6);
   min-width: 300px;
   border: 1px solid #646cff;
-  animation: subirSuave 0.5s ease-out; /* Animação ao aparecer */
+  animation: subirSuave 0.5s ease-out;
+  margin-top: 20px;
 }
-.card-tabuada h2 {
-  font-size: 1.3rem; 
-  margin-bottom: 15px !important; 
-  margin-top: 0; 
-  padding-top: 0;
+
+.titulo-tabuada {
+  color: #646cff;
+  text-align: center;
+  margin-bottom: 20px !important;
+  font-size: 1.3rem;
 }
 
 .item-tabuada {
@@ -75,6 +81,10 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   justify-content: center; 
   gap: 8px;
+}
+
+.resultado-destaque {
+  color: #00d1ff;
 }
 
 @keyframes subirSuave {
