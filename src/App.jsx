@@ -5,8 +5,8 @@ import { Tabuada } from './components/Tabuada'
 function App() {
   const [numero, setNumero] = useState('')
 
-  const lidarComMudanca = (e) => {
-    const valorDigitado = e.target.value;
+  const lidarComMudanca = (input) => {
+    const valorDigitado = input.target.value;
     if (valorDigitado === '') {
       setNumero('');
       return;
@@ -21,7 +21,7 @@ function App() {
         <p className="texto-instrucao">Digite um número para calcular:</p>
         
         <input 
-          type="text" 
+          type="number" 
           inputMode="numeric"
           className="input-numero"
           maxLength={10}
