@@ -11,7 +11,11 @@ function App() {
       setNumero('');
       return;
     }
-     setNumero(valorDigitado);
+
+    const valorCorrigido = valorDigitado.replace(/[^0-9]/g, "");
+    input.target.value = valorCorrigido
+    setNumero(valorCorrigido);
+
   };
 
   return (
